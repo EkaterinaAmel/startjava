@@ -90,7 +90,7 @@ public class VariablesTheme {
 
         System.out.println("\n\n6. Вывод символов и их кодов.");
         char sharp = '#';
-        System.out.println(sharp + " = " + 35");
+        System.out.println(sharp + " = 35");
         char symbol1 = '&';
         System.out.println(symbol1 + " = 38");
         char symbol2 = '@';
