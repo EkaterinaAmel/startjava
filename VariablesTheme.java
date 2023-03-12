@@ -125,12 +125,12 @@ public class VariablesTheme {
         System.out.println("\n\n8. Вывод количества сотен, десятков и единиц числа.");
         int number = 123;
         int hundreds = number / 100;
-        int dozens = (number - (hundreds * 100)) / 10;
-        int units = number % 10;
+        int tens = (number - (hundreds * 100)) / 10;
+        int ones = number % 10;
         System.out.println("Число " + number + " содержит:");
-        System.out.println( hundreds + " сотен\n" + dozens + " десятков\n" + units + " единиц");
-        int sum = hundreds + dozens + units;
-        int multiplication = hundreds * dozens * units;
+        System.out.println( hundreds + " сотен\n" + tens + " десятков\n" + ones + " единиц");
+        int sum = hundreds + tens + ones;
+        int multiplication = hundreds * tens * ones;
         System.out.println("Сумма его цифр = " + sum);
         System.out.print("Произведение = " + multiplication);
 
