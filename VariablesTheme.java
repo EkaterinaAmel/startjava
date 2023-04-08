@@ -96,8 +96,7 @@ public class VariablesTheme {
         System.out.print("Новые значения переменных: первая переменная = ");
         System.out.println(number1 + ", вторая переменная = " + number2);
 
-        System.out.println("\n\n6. Вывод
-                символов и их кодов.");
+        System.out.println("\n\n6. Вывод символов и их кодов.");
         char sharp = '#';
         char ampersand = '&';
         char at = '@';
@@ -119,7 +118,7 @@ public class VariablesTheme {
         System.out.println(" " + slash + underscore + openParenthesis + " " + closeParenthesis + backslash);
         System.out.println(" " + slash + " " + backslash);
         System.out.print(" " + slash + underscore + underscore + underscore + underscore + slash + backslash +
-                underscore + underscore+ backslash);
+                underscore + underscore + backslash);
 
 
         System.out.println("\n\n8. Вывод количества сотен, десятков и единиц числа.");
@@ -138,7 +137,7 @@ public class VariablesTheme {
         int seconds = 86399;
         int hours = seconds / 3600;
         int minutes = seconds % 3600 / 60;
-        seconds -= minutes;
+        seconds = seconds - (hours * 3600 + minutes * 60);
         System.out.println("В 86399 секундах содержится " + hours + ":" + minutes + ":" + seconds);
     }
 }
