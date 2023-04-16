@@ -2,7 +2,7 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Вывод значений переменных на консоль.");
         byte core = 4;
-        short monitor = (short) 1;
+        short monitor = 1;
         int tire = 5000;
         long wide = 376;
         long height = 260;
@@ -32,10 +32,10 @@ public class VariablesTheme {
         System.out.println("Общая стоимость товаров со скидкой: " + discountPrice);
 
         System.out.print("\n3. Вывод слова JAVA.");
-        System.out.println("\n J a v v a ");
-        System.out.println(" J a a v v a a ");
-        System.out.println("J J aaaaa V V aaaaa ");
-        System.out.println(" JJ a a V a a");
+        System.out.println("\n   J    a  v     v  a ");
+        System.out.println("   J   a a  v   v  a a    ");
+        System.out.println("J  J  aaaaa  V V  aaaaa   ");
+        System.out.println(" JJ  a     a  V  a     a");
 
         System.out.println("\n4. Вывод min и max значений целых числовых типов.");
         byte byteMax = 127;
@@ -50,7 +50,7 @@ public class VariablesTheme {
 
         System.out.println("первоначальное значение short = " + shortMax);
         shortMax++;
-        System.out.println("значение после инкремента short = " + ++shortMax);
+        System.out.println("значение после инкремента short = " + shortMax);
         shortMax--;
         System.out.println("значение после декремента short = " + shortMax);
 
@@ -81,18 +81,18 @@ public class VariablesTheme {
         System.out.println("б) Перестановка с помощью арифметических операций:");
         System.out.print("Исходные значения переменных: первая переменная = ");
         System.out.println(number1 + ", вторая переменная = " + number2);
-        temp = number1 - number2;
-        number1 -= temp;
-        number2 += temp;
+        number1 = number1 + number2;
+        number2 = number1 - number2;
+        number1 = number1 - number2;
         System.out.print("Новые значения переменных: первая переменная = ");
         System.out.println(number1 + ", вторая переменная = " + number2);
 
         System.out.println("в) Перестановка с помощью побитовой операции ^:");
         System.out.print("Исходные значения переменных: первая переменная = ");
         System.out.println(number1 + ", вторая переменная = " + number2);
-        temp = number1 ^ number2;
-        number1 ^= temp;
-        number2 ^= temp;
+        number1 = number1 ^ number2;
+        number2 = number1 ^ number2;
+        number1 = number1 ^ number2;
         System.out.print("Новые значения переменных: первая переменная = ");
         System.out.println(number1 + ", вторая переменная = " + number2);
 
@@ -101,24 +101,24 @@ public class VariablesTheme {
         char ampersand = '&';
         char at = '@';
         char caret = '^';
-        char underscore = '_';
+        char underscr = '_';
         System.out.println(sharp + " = " + (int) sharp);
         System.out.println(ampersand + " = " + (int) ampersand);
         System.out.println(at + " = " + (int) at);
         System.out.println(caret + " = " + (int) caret);
-        System.out.print(underscore + " = " + (int) underscore);
+        System.out.print(underscr + " = " + (int) underscr);
 
         System.out.println("\n\n7. Вывод в консоль ASCII-арт Дюка.");
-        char slash = '/';
-        char backslash = '\\';
-        char openParenthesis = '(';
-        char closeParenthesis = ')';
-        System.out.println(" " + slash + backslash);
-        System.out.println(" " + slash + " " + backslash);
-        System.out.println(" " + slash + underscore + openParenthesis + " " + closeParenthesis + backslash);
-        System.out.println(" " + slash + " " + backslash);
-        System.out.print(" " + slash + underscore + underscore + underscore + underscore + slash + backslash +
-                underscore + underscore + backslash);
+        char sl = '/';
+        char bsl = '\\';
+        char oPar = '(';
+        char cPar = ')';
+        System.out.println("     " + sl + bsl);
+        System.out.println("    " + sl + "  " + bsl);
+        System.out.println("   " + sl + underscr + oPar + " " + cPar + bsl);
+        System.out.println("  " + sl + "      " + bsl);
+        System.out.print(" " + sl + underscr + underscr + underscr + underscr + sl + bsl + underscr + underscr + bsl);
+
 
 
         System.out.println("\n\n8. Вывод количества сотен, десятков и единиц числа.");
@@ -136,8 +136,8 @@ public class VariablesTheme {
         System.out.println("\n\n9. Вывод времени.");
         int seconds = 86399;
         int hours = seconds / 3600;
-        int minutes = seconds % 3600 / 60;
-        seconds = seconds - (hours * 3600 + minutes * 60);
+        int minutes = seconds / 60 % 60;
+        seconds = seconds % 60;
         System.out.println("В 86399 секундах содержится " + hours + ":" + minutes + ":" + seconds);
     }
-}
+}    
